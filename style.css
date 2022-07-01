@@ -1,3 +1,13 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-image: url(resources/bg.png);
+	background-size: contain;
+	image-rendering: pixelated;
+}
+
 main {
 	display: flex;
 	flex-flow: row nowrap;
@@ -5,9 +15,63 @@ main {
 }
 
 #sidenav {
-	border: 1px solid black;
+	border: 2px solid black;
+	width: auto;
+	border-radius: 8px;
+	background-image: url(resources/bricks_white.bmp);
+	box-shadow: 5px 0 5px white inset, 0 5px 5px white inset, -5px 0 5px #333 inset, 0 -5px 5px #333 inset;
+}
+
+.topleft {
+	position: absolute;
+	transform: translate(-50%, -50%) scale(2);
+}
+
+img {
+	image-rendering: pixelated;
+}
+
+.links {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.links ul {
+	padding: 0;
+}
+
+.links ul li {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.links ul li a {
+	text-decoration: none;
+	color: black;
+	text-shadow: -1px 0 white, 1px 0 white, 0 -1px white, 0 1px white;
+	margin-left: 5px;
+}
+
+.links ul li a:hover {
+	position: relative;
+	transform: translate(5px);
 }
 
 .box {
-	border: 1px solid black;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	margin-right: 5px;
+	margin-left: 5px;
+	width: 60%;
+	border: 2px solid black;
+	border-radius: 8px;
+	background-color: #f2f2f2;
+	box-shadow: 5px 0 5px white inset, 0 5px 5px white inset, -5px 0 5px #333 inset, 0 -5px 5px #333 inset;
+}
+
+.textbox {
+	margin: 10px;
+	text-align: justify;
 }
