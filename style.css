@@ -1,11 +1,33 @@
+@font-face {
+    font-family: 'Hey-Gorgeous';
+    src:url('resources/fonts/Hey-Gorgeous.ttf.woff') format('woff'),
+        url('resources/fonts/Hey-Gorgeous.ttf.svg#Hey-Gorgeous') format('svg'),
+        url('resources/fonts/Hey-Gorgeous.ttf.eot'),
+        url('resources/fonts/Hey-Gorgeous.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	font-family: 'Hey-Gorgeous';	
+}
+
 html {
 	height: 100%;
+	cursor: url(resources/fingercur2.png), auto;
 }
 
 body {
-	background-image: url(resources/bg_dithered_3.png);
-	background-size: contain;
+	background-image: url(resources/dirt.bmp);
 	image-rendering: pixelated;
+}
+
+#bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
 }
 
 header {
@@ -70,14 +92,20 @@ img {
 	transform: translate(5px);
 }
 
+.flexv {
+	display: flex;
+	flex-flow: column nowrap;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 .box {
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	margin-right: 5px;
-	margin-left: 5px;
-	width: 60%;
+	margin-bottom: 5px;
+	width: 100%;
 	border: 2px solid black;
 	border-radius: 8px;
 	background-color: #f2f2f2;
@@ -99,7 +127,14 @@ img {
 
 .textbox {
 	margin: 10px;
-	text-align: justify;
+	font-size: 10px;
+}
+
+.bottomleft {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(-50%, 50%);
 }
 
 .flexd {
@@ -110,4 +145,22 @@ img {
 
 .flexd img {
 	margin-bottom: 10px;
+}
+
+.topcent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 30px;
+	transform: translate(0, -60%);
+}
+
+#bombette {
+	float: right;
+}
+
+.audio {
+	padding: 5px;
+	width: auto;
+	height: 30px;
 }
