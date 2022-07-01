@@ -3,9 +3,21 @@ html {
 }
 
 body {
-	background-image: url(resources/bg.png);
+	background-image: url(resources/bg_dithered_3.png);
 	background-size: contain;
 	image-rendering: pixelated;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+	margin-bottom: 30px;
+}
+
+header img {
+	transform: scale(1.5);
+	image-rendering: auto;
 }
 
 main {
@@ -59,6 +71,7 @@ img {
 }
 
 .box {
+	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -71,7 +84,30 @@ img {
 	box-shadow: 5px 0 5px white inset, 0 5px 5px white inset, -5px 0 5px #333 inset, 0 -5px 5px #333 inset;
 }
 
+#goombario {
+	position: relative;
+	transform: translate(-5px, -5px);
+	float: left;
+}
+
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%) scale(2);
+}
+
 .textbox {
 	margin: 10px;
 	text-align: justify;
+}
+
+.flexd {
+	display: flex;
+	flex-flow: column nowrap;
+	margin-left: 40px;
+}
+
+.flexd img {
+	margin-bottom: 10px;
 }
