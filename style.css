@@ -1,1 +1,13 @@
+main {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
 
+#sidenav {
+	border: 1px solid black;
+}
+
+.box {
+	border: 1px solid black;
+}
